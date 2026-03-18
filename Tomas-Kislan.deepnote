@@ -1,0 +1,922 @@
+environment: {}
+execution: {}
+metadata:
+  createdAt: 2025-10-03T09:46:24.570Z
+  modifiedAt: 2026-03-18T18:36:00.919Z
+project:
+  id: e20bfc2e369c44c78745c2a0a50d46d3
+  integrations:
+    - id: 2fa61b86-663b-4093-918b-d2f2e155b075
+      name: BigQuery Staging and OAuth
+      type: big-query
+    - id: c965a743-58bd-47ad-b24f-d8327932f9ef
+      name: Deepnote BigQuery - production
+      type: big-query
+    - id: e823e985-3f95-4a0b-8487-1b39480eb235
+      name: Deepnote Testing
+      type: big-query
+    - id: 88f5e099-7229-4bd4-84dc-b28e96a29816
+      name: rnacentral
+      type: pgsql
+    - id: cd9f2db4-230b-49d5-b567-a70aaf3e6ff2
+      name: Staging Big Query Assessment
+      type: big-query
+    - id: a2d95f48-81e5-46fc-bcb0-29779c06b3cd
+      name: testing_deepnote_git_sync
+      type: github_package
+  name: Tomas Kislan
+  notebooks:
+    - blocks:
+        - id: ea277a38e8a04280884c21907eb66907
+          blockGroup: e74c75c1b72f4306917f8c0e698c89d7
+          sortingKey: "000000"
+          type: text-cell-p
+          content: ""
+          metadata:
+            formattedRanges: []
+        - id: 8723c33fb2434a67b8d16265441c380e
+          blockGroup: c780b36cfecd43d694d4e5f337e86c2d
+          sortingKey: "000001"
+          contentHash: 709b1b50
+          executionCount: 1
+          executionFinishedAt: 2025-11-12T09:38:03.950Z
+          executionStartedAt: 2025-11-12T09:38:03.627Z
+          type: code
+          content: >-
+            import pandas as pd
+
+            df = pd.read_json('profile.json')
+          metadata:
+            execution_start: 1762940283627
+            execution_millis: 323
+            execution_context_id: 86666579-1db6-4923-81b1-f0ca13031250
+        - id: aa4324deb7ab4710abdc7195bb54fe39
+          blockGroup: eecca6de19ac4c57af7502878cc444ca
+          sortingKey: "000002"
+          contentHash: f804c160
+          executionCount: 10
+          executionFinishedAt: 2025-10-09T10:19:46.629Z
+          executionStartedAt: 2025-10-09T10:19:46.628Z
+          type: code
+          content: df
+          metadata:
+            execution_start: 1760005186628
+            execution_millis: 1
+            execution_context_id: 0234ca19-9960-4f3b-8192-4580e726b4ac
+        - id: 8d20984e93164e29a17ac4fd9df68d34
+          blockGroup: 1a33d6faebcc4ff0b3410edf6fce204b
+          sortingKey: "000003"
+          contentHash: f20a5cbc
+          executionCount: 16
+          executionFinishedAt: 2025-10-09T10:20:07.477Z
+          executionStartedAt: 2025-10-09T10:20:07.465Z
+          type: visualization
+          content: ""
+          metadata:
+            execution_start: 1760005207465
+            execution_millis: 12
+            execution_context_id: 0234ca19-9960-4f3b-8192-4580e726b4ac
+            deepnote_variable_name: df
+            deepnote_visualization_spec:
+              layer:
+                - layer:
+                    - layer:
+                        - mark:
+                            clip: true
+                            type: bar
+                            color: "#2266D3"
+                            tooltip: true
+                          encoding:
+                            x:
+                              sort: null
+                              type: nominal
+                              field: name
+                              scale:
+                                type: linear
+                            y:
+                              axis:
+                                format:
+                                  type: default
+                                  decimals: null
+                                formatType: numberFormatFromNumberType
+                              type: quantitative
+                              field: dur
+                              scale:
+                                type: linear
+                              format:
+                                type: default
+                                decimals: null
+                              aggregate: sum
+                              formatType: numberFormatFromNumberType
+                            color:
+                              type: nominal
+                              datum: dur
+                              scale:
+                                range:
+                                  - "#2266D3"
+                                domain:
+                                  - dur
+                            xOffset:
+                              datum: series_0
+                          transform: []
+                  resolve:
+                    scale:
+                      color: independent
+              title: ""
+              config:
+                legend:
+                  disable: false
+              $schema: https://vega.github.io/schema/vega-lite/v5.json
+              encoding: {}
+              usermeta:
+                seriesNames:
+                  - dur
+                seriesOrder:
+                  - 0
+                specSchemaVersion: 2
+                tooltipDefaultMode: true
+        - id: 6ce1f40aeb754c4c89aaabf61a79d20d
+          blockGroup: 5af7f305b16f4c35ac8dcff802d9df54
+          sortingKey: "000004"
+          contentHash: 569fd661
+          executionCount: 1
+          executionFinishedAt: 2025-10-13T08:32:59.466Z
+          executionStartedAt: 2025-10-13T08:32:59.465Z
+          type: input-slider
+          content: ""
+          metadata:
+            execution_start: 1760344379465
+            execution_millis: 1
+            execution_context_id: 355a0b58-bc0f-4d7f-b108-731ab0cfa4b0
+            deepnote_variable_name: input_1
+            deepnote_input_label: ""
+            deepnote_variable_value: "8"
+            deepnote_slider_min_value: 0
+            deepnote_slider_max_value: 10
+            deepnote_slider_step: 1
+        - id: 1ad573e70b2340c6a2f80d684700f248
+          blockGroup: f2a56f11e43c4fc2b8c631ddf5b206d9
+          sortingKey: "000005"
+          contentHash: 6ce47c81
+          executionCount: 4
+          executionFinishedAt: 2025-11-12T09:38:53.337Z
+          executionStartedAt: 2025-11-12T09:38:53.337Z
+          type: input-select
+          content: ""
+          metadata:
+            execution_start: 1762940333337
+            execution_millis: 0
+            execution_context_id: 86666579-1db6-4923-81b1-f0ca13031250
+            deepnote_variable_name: input_2
+            deepnote_input_label: ""
+            deepnote_variable_value: Option 1
+            deepnote_variable_default_value: ""
+            deepnote_variable_options:
+              - Option 1
+              - Option 2
+            deepnote_variable_custom_options:
+              - Option 1
+              - Option 2
+            deepnote_variable_selected_variable: ""
+            deepnote_variable_select_type: from-options
+        - id: df83c3f6dae546dea026866462fa28de
+          blockGroup: 2c7745e44c2b4912b7094256d06648bf
+          sortingKey: "000006"
+          contentHash: 292c12ef
+          executionCount: 7
+          executionFinishedAt: 2025-11-12T09:39:00.151Z
+          executionStartedAt: 2025-11-12T09:39:00.150Z
+          type: code
+          content: input_2
+          metadata:
+            execution_start: 1762940340150
+            execution_millis: 1
+            execution_context_id: 86666579-1db6-4923-81b1-f0ca13031250
+      executionMode: block
+      id: 5ef2d63e3e9d45a2831ddc61ed4adbba
+      isModule: false
+      name: Notebook 1
+    - blocks:
+        - id: b19da2f03139491d8dc25aba2748c787
+          blockGroup: 4b847a70900e48daae65b504ea269a10
+          sortingKey: "000000"
+          contentHash: f678b0fb
+          executionCount: 4
+          executionFinishedAt: 2025-12-30T09:38:09.606Z
+          executionStartedAt: 2025-12-30T09:38:05.099Z
+          type: sql
+          content: >-
+            -- Average number of notebooks per project by plan
+
+            with t as (select count(*) as cnt, n.project_id, ap.plan_name
+
+            from deepnote_production_view.notebooks n
+
+            left join deepnote_production_view.projects p on n.project_id = p.id
+
+            left join deepnote_production_view.teams t on p.team_id = t.id
+
+            left join deepnote_production_view.active_plans ap on ap.team_id = t.id
+
+            group by n.project_id, ap.plan_name)
+
+            select avg(cnt), plan_name from t
+
+            group by plan_name
+
+            ;
+          metadata:
+            execution_start: 1767087485099
+            execution_millis: 4507
+            execution_context_id: 0a39fe72-a72c-450b-b3a6-e992b4b08194
+            deepnote_table_state:
+              sortBy: []
+              filters: []
+              pageSize: 25
+              pageIndex: 0
+              columnOrder:
+                - f0_
+                - plan_name
+              hiddenColumnIds: []
+              columnDisplayNames: []
+              conditionalFilters: []
+              cellFormattingRules: []
+              wrappedTextColumnIds: []
+            deepnote_variable_name: df_1
+            deepnote_return_variable_type: dataframe
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+            deepnote_table_loading: false
+        - id: d31a840251bf4984a7781ea8536e1489
+          blockGroup: 61c7f70c30a4480d9fcd2f11e0b34be7
+          sortingKey: "000001"
+          contentHash: 2e108fa0
+          executionCount: 7
+          executionFinishedAt: 2025-12-30T09:38:39.420Z
+          executionStartedAt: 2025-12-30T09:38:39.420Z
+          type: code
+          content: >-
+            # Get first row from df_1
+
+            first_row = df_1.iloc[0]
+
+            first_row
+          metadata:
+            execution_start: 1767087519420
+            execution_millis: 0
+            execution_context_id: 0a39fe72-a72c-450b-b3a6-e992b4b08194
+        - id: f1cbf4ca80a7420c9a8d6040376c9da0
+          blockGroup: 85287841751140d2b7d8040d8c151e40
+          sortingKey: "000002"
+          contentHash: 8e116b85
+          executionCount: 1
+          executionFinishedAt: 2025-11-22T10:14:11.323Z
+          executionStartedAt: 2025-11-22T10:14:09.719Z
+          type: sql
+          content: >-
+            select * from frontend_tracking.ai_feedback_submitted
+
+            where anonymous_id = '10'
+          metadata:
+            execution_start: 1763806449719
+            execution_millis: 1604
+            execution_context_id: 193ca313-60d8-4ff0-a181-16a21b510540
+            deepnote_variable_name: df_6
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+        - id: b0ee34563b224546957c3e82a51e0f0b
+          blockGroup: ec87a5d9fdde4cb0959fe952d6075df3
+          sortingKey: "000003"
+          type: sql
+          content: SELECT * FROM `deepnote-testing`.tomas_test.mytable_ LIMIT 100
+          metadata:
+            deepnote_variable_name: df_7
+            sql_integration_id: 2fa61b86-663b-4093-918b-d2f2e155b075
+        - id: 25e3038838d04800abc28de336680831
+          blockGroup: e55c670a52194ad89c75a8629b8289a3
+          sortingKey: "000004"
+          contentHash: fce8c699
+          executionCount: 1
+          executionFinishedAt: 2025-12-16T14:29:52.588Z
+          executionStartedAt: 2025-12-16T14:29:51.409Z
+          type: sql
+          content: SELECT * FROM `deepnote-testing.tomas_test.mytable_*` LIMIT 100
+          metadata:
+            execution_start: 1765895391409
+            execution_millis: 1179
+            execution_context_id: 5ee76857-8581-4214-8690-d045c6c26bc3
+            deepnote_variable_name: df_8
+            sql_integration_id: 2fa61b86-663b-4093-918b-d2f2e155b075
+        - id: c09643eccbc744ee99cfa9782a2b0d45
+          blockGroup: d5a01db7177542bdb6a0bcacb3eb6aea
+          sortingKey: "000005"
+          contentHash: 80fd510
+          executionCount: 4
+          executionFinishedAt: 2025-12-16T14:46:15.247Z
+          executionStartedAt: 2025-12-16T14:46:13.919Z
+          type: sql
+          content: SELECT * FROM ``deepnote-testing`.tomas_test.mytable_*` LIMIT 100
+          metadata:
+            execution_start: 1765896373919
+            execution_millis: 1328
+            execution_context_id: 5ee76857-8581-4214-8690-d045c6c26bc3
+            deepnote_variable_name: df_9
+            sql_integration_id: 2fa61b86-663b-4093-918b-d2f2e155b075
+        - id: e8ee9783bce345698bbf91823dfcd0f4
+          blockGroup: 0dccc1850d1a455599b2819bb574ee11
+          sortingKey: "000006"
+          contentHash: 752cb926
+          executionCount: 2
+          executionFinishedAt: 2025-11-22T09:21:29.874Z
+          executionStartedAt: 2025-11-22T09:21:29.345Z
+          type: sql
+          content: >-
+            select * from deepnote_production_view.active_plans
+
+            limit 100;
+          metadata:
+            execution_start: 1763803289345
+            execution_millis: 529
+            execution_context_id: a700e648-4d0d-4a0b-b238-7fb6f491a0ba
+            deepnote_variable_name: query_2
+            deepnote_return_variable_type: query_preview
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+        - id: 91d07f89557c4001bf67ae1edf0d0b97
+          blockGroup: 6bd7d9c6883043febfb49201189128a9
+          sortingKey: "000007"
+          contentHash: 3b029733
+          executionCount: 3
+          executionFinishedAt: 2025-11-22T09:21:32.673Z
+          executionStartedAt: 2025-11-22T09:21:29.945Z
+          type: sql
+          content: >-
+            -- Number of users per team per role in DAZN workspaces
+
+            select t.name, t.slug, tm.user_role, count(*) as cnt from deepnote_production_view.teams t
+
+            left join deepnote_production_view.team_members tm on t.id = tm.team_id
+
+            left join deepnote_production_view.users u on tm.user_id = u.id
+
+            where lower(t.name) like '%dazn%'
+
+            group by t.id, t.name, t.slug, tm.user_role
+
+            having cnt >= 5
+
+            order by t.slug, tm.user_role
+          metadata:
+            execution_start: 1763803289945
+            execution_millis: 2728
+            execution_context_id: a700e648-4d0d-4a0b-b238-7fb6f491a0ba
+            deepnote_table_state:
+              sortBy: []
+              filters: []
+              pageSize: 50
+              pageIndex: 0
+              columnOrder:
+                - id
+                - owner_id
+                - name
+                - slug
+                - description
+                - link
+                - avatar
+                - created_at
+                - updated_at
+                - deleted_at
+                - custom_env_enabled
+                - stripe_customer_id
+                - is_active
+                - deepnote_cell_enabled
+                - is_under_review
+                - is_starter_team
+                - public_projects_allowed
+                - public_apps_allowed
+                - review_status
+                - github_url
+                - twitter_handle
+                - location
+                - _synced_at
+              hiddenColumnIds: []
+              columnDisplayNames: []
+              conditionalFilters: []
+              cellFormattingRules: []
+              wrappedTextColumnIds: []
+            deepnote_variable_name: query_3
+            deepnote_return_variable_type: query_preview
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+            deepnote_table_loading: false
+        - id: 19f9cd4b31384f71a000347585dc1483
+          blockGroup: 9810a727591f42d6bcb3469129a938f3
+          sortingKey: "000008"
+          contentHash: 79f544d3
+          executionCount: 4
+          executionFinishedAt: 2025-11-22T09:21:35.313Z
+          executionStartedAt: 2025-11-22T09:21:32.735Z
+          type: sql
+          content: >-
+            -- Number of projects with activity in the last 90 days
+
+            with t as (SELECT max(b.updated_at) as max_udpated_at, project_id 
+
+            FROM `deepnote_production_view.blocks` b
+
+            left join deepnote_production_view.notebooks n on b.notebook_id = n.id
+
+            GROUP BY project_id
+
+            HAVING max_udpated_at > TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 90 DAY)
+
+            )
+
+            select count(*) from t
+          metadata:
+            execution_start: 1763803292735
+            execution_millis: 2578
+            execution_context_id: a700e648-4d0d-4a0b-b238-7fb6f491a0ba
+            deepnote_variable_name: query_4
+            deepnote_return_variable_type: query_preview
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+        - id: e6cbd30c7f1d4b0fb501e84edaf10c57
+          blockGroup: 4d21039824544bfa8ea546732dba57bf
+          sortingKey: "000009"
+          contentHash: fe90607c
+          executionCount: 5
+          executionFinishedAt: 2025-11-22T09:21:35.953Z
+          executionStartedAt: 2025-11-22T09:21:35.360Z
+          type: sql
+          content: >-
+            select * from deepnote_production_view.blocks
+
+            where block_type = 'big-number'
+
+            limit 100;
+          metadata:
+            execution_start: 1763803295360
+            execution_millis: 593
+            execution_context_id: a700e648-4d0d-4a0b-b238-7fb6f491a0ba
+            deepnote_variable_name: query_5
+            deepnote_return_variable_type: query_preview
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+        - id: 4409497b29c249febf6419f2f08a4267
+          blockGroup: d4648a852dc54945b37079ed38c3ff93
+          sortingKey: "000010"
+          type: text-cell-callout
+          content: Callout
+          metadata:
+            formattedRanges: []
+        - id: b8fefb7b8f344ee7b77945d61736fb08
+          blockGroup: 9926c744a840457489c0f905a72dcb61
+          sortingKey: "000011"
+          type: markdown
+          content: ""
+          metadata: {}
+        - id: 171aa5101100407db099248c75201a2b
+          blockGroup: a5d5fa99b84c45c0bcaec0c5a7849983
+          sortingKey: "000012"
+          type: text-cell-todo
+          content: ""
+          metadata:
+            formattedRanges: []
+            checked: false
+        - id: b4fdfdeb0b854af8ab3305854782c7e5
+          blockGroup: 8c67dacf1f33421db5530cb2af486d9e
+          sortingKey: "000013"
+          type: text-cell-p
+          content: Some paragraph
+          metadata:
+            formattedRanges: []
+        - id: 1c277614e3c742a89abf9e17bd782b10
+          blockGroup: 0159917315704a8a8e71ea049c3a1ed3
+          sortingKey: "000014"
+          type: text-cell-h1
+          content: Some header
+          metadata:
+            formattedRanges: []
+        - id: 42fa37445acd4209925d9825a48aa4da
+          blockGroup: 91c5a8a3a55c46b58b161a9dec4e7ecb
+          sortingKey: "000015"
+          contentHash: b4408b03
+          executionCount: 1
+          executionFinishedAt: 2026-01-23T17:05:31.187Z
+          executionStartedAt: 2026-01-23T17:05:29.515Z
+          type: sql
+          content: >-
+            select * from deepnote_production_view.users
+
+            where lower(email) like '%wezeo%'
+          metadata:
+            execution_start: 1769187929515
+            execution_millis: 1672
+            execution_context_id: f8feb9c4-6e32-4228-96b4-acd89ddb9a98
+            deepnote_variable_name: df_10
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+      executionMode: block
+      id: d74de06869f74fa3a44be7ee3e79d58e
+      isModule: false
+      name: Notebook 2
+    - blocks:
+        - id: 5d3c38bd9f5c4188b062e0473c53e0df
+          blockGroup: 38c949a7a5dd45e0b85e1edef1c3ef00
+          sortingKey: "000000"
+          type: text-cell-h1
+          content: Testing inputs
+          metadata:
+            formattedRanges: []
+        - id: b83f0a5310e94bfe90c632adda40092c
+          blockGroup: 92f21410c8c54ac0be7e4d2a544552ee
+          sortingKey: "000001"
+          contentHash: a0e913da
+          executionCount: 1
+          executionFinishedAt: 2025-11-05T16:42:17.902Z
+          executionStartedAt: 2025-11-05T16:42:17.901Z
+          type: input-text
+          content: ""
+          metadata:
+            execution_start: 1762360937901
+            execution_millis: 1
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_1
+            deepnote_input_label: some display name
+            deepnote_variable_value: some text input
+            deepnote_variable_default_value: some default value
+        - id: 2ccc1a55ecfa44e2878fed9b480cbb05
+          blockGroup: 2b5f9340349f4baaa5a3237331214352
+          sortingKey: "000002"
+          contentHash: c80fe853
+          executionCount: 2
+          executionFinishedAt: 2025-11-05T16:42:17.950Z
+          executionStartedAt: 2025-11-05T16:42:17.950Z
+          type: input-textarea
+          content: ""
+          metadata:
+            execution_start: 1762360937950
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_2
+            deepnote_variable_value: >-
+              some multiline
+
+              text input
+        - id: a1eb018fdf9e4a9ca9ee81cf94cc822e
+          blockGroup: ba248341bdd94b93a234777968bfedcf
+          sortingKey: "000003"
+          contentHash: a5ebb576
+          executionCount: 3
+          executionFinishedAt: 2025-11-05T16:42:18.000Z
+          executionStartedAt: 2025-11-05T16:42:18.000Z
+          type: input-select
+          content: ""
+          metadata:
+            execution_start: 1762360938000
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_3
+            deepnote_input_label: ""
+            deepnote_variable_value: Option 1
+            deepnote_variable_options:
+              - Option 1
+              - Option 2
+            deepnote_variable_custom_options:
+              - Option 1
+              - Option 2
+            deepnote_variable_selected_variable: ""
+            deepnote_variable_select_type: from-options
+        - id: 1457f0a093184575b4802d00a160fa3c
+          blockGroup: 9f77387639cd432bb913890dea32b6c3
+          sortingKey: "000004"
+          contentHash: 227e70a9
+          executionCount: 4
+          executionFinishedAt: 2025-11-05T16:42:18.050Z
+          executionStartedAt: 2025-11-05T16:42:18.050Z
+          type: input-select
+          content: ""
+          metadata:
+            execution_start: 1762360938050
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_4
+            deepnote_input_label: some select display name
+            deepnote_variable_value:
+              - Option 1
+            deepnote_variable_options:
+              - Option 1
+              - Option 2
+            deepnote_variable_custom_options:
+              - Option 1
+              - Option 2
+            deepnote_variable_selected_variable: ""
+            deepnote_variable_select_type: from-options
+            deepnote_allow_multiple_values: true
+        - id: 290d171aa57446309992422edea48255
+          blockGroup: e867ead6336e406992c632f315d8316b
+          sortingKey: "000005"
+          contentHash: d20bd87b
+          executionCount: 6
+          executionFinishedAt: 2025-11-05T16:42:18.150Z
+          executionStartedAt: 2025-11-05T16:42:18.150Z
+          type: input-slider
+          content: ""
+          metadata:
+            execution_start: 1762360938150
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_6
+            deepnote_input_label: slider input value
+            deepnote_variable_value: "5"
+            deepnote_variable_default_value: "5"
+            deepnote_slider_min_value: 0
+            deepnote_slider_max_value: 10
+            deepnote_slider_step: 1
+        - id: f5a07f04cd874b498dc8873cf468a818
+          blockGroup: a28007ff7c7f4a9d831e7b92fe8f038c
+          sortingKey: "000006"
+          contentHash: 569e2a31
+          executionCount: 7
+          executionFinishedAt: 2025-11-05T16:42:18.200Z
+          executionStartedAt: 2025-11-05T16:42:18.200Z
+          type: input-slider
+          content: ""
+          metadata:
+            execution_start: 1762360938200
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_7
+            deepnote_input_label: step size 2
+            deepnote_variable_value: "6"
+            deepnote_slider_min_value: 4
+            deepnote_slider_max_value: 10
+            deepnote_slider_step: 2
+        - id: 09a0f5e21eb44a2eb8551b9ea5eeb74d
+          blockGroup: 146c4af1efb2448fa2d3b7cfbd30da77
+          sortingKey: "000007"
+          contentHash: 4dfaf9fe
+          executionCount: 5
+          executionFinishedAt: 2025-11-05T16:42:18.100Z
+          executionStartedAt: 2025-11-05T16:42:18.100Z
+          type: input-select
+          content: ""
+          metadata:
+            execution_start: 1762360938100
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_5
+            deepnote_input_label: allows empty value
+            deepnote_variable_value: Option 1
+            deepnote_variable_default_value: ""
+            deepnote_variable_options:
+              - Option 1
+              - Option 2
+            deepnote_variable_custom_options:
+              - Option 1
+              - Option 2
+            deepnote_variable_selected_variable: ""
+            deepnote_variable_select_type: from-options
+            deepnote_allow_empty_values: true
+        - id: 4d2f7cad7f3148ab8f9b0dcd8082e9be
+          blockGroup: 5dd57f6bb90b49ebb954f6247b26427d
+          sortingKey: "000008"
+          contentHash: dd68f6b8
+          executionCount: 8
+          executionFinishedAt: 2025-11-05T16:42:18.260Z
+          executionStartedAt: 2025-11-05T16:42:18.260Z
+          type: input-checkbox
+          content: ""
+          metadata:
+            execution_start: 1762360938260
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_8
+            deepnote_input_label: ""
+            deepnote_variable_value: true
+        - id: c9c0b2feb34042cab80f5c4076caa964
+          blockGroup: e84010446b844a86a1f6bbe5d89dc798
+          sortingKey: "000009"
+          contentHash: e1ac03e6
+          executionCount: 9
+          executionFinishedAt: 2025-11-05T16:42:18.314Z
+          executionStartedAt: 2025-11-05T16:42:18.314Z
+          type: input-date
+          content: ""
+          metadata:
+            execution_start: 1762360938314
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_9
+            deepnote_input_label: ""
+            deepnote_variable_value: 2025-10-13T00:00:00.000Z
+            deepnote_input_date_version: 2
+        - id: feed60dd84d744ceb0385a06fed4e903
+          blockGroup: 1fe36d4de4f04fefbe80cdd0d1a3ad3b
+          sortingKey: "000010"
+          contentHash: 72a8125b
+          executionCount: 10
+          executionFinishedAt: 2025-11-05T16:42:18.370Z
+          executionStartedAt: 2025-11-05T16:42:18.370Z
+          type: input-date-range
+          content: ""
+          metadata:
+            execution_start: 1762360938370
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_10
+            deepnote_variable_value:
+              - 2025-10-06
+              - 2025-10-16
+        - id: 447b901d8a56460fbec9d35fbb3d099a
+          blockGroup: 651f4f5db96b43d5a6a1a492935fa08d
+          sortingKey: "000011"
+          contentHash: bbfb2f9
+          executionCount: 12
+          executionFinishedAt: 2025-11-05T16:42:18.470Z
+          executionStartedAt: 2025-11-05T16:42:18.470Z
+          type: input-file
+          content: ""
+          metadata:
+            execution_start: 1762360938470
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_12
+            deepnote_input_label: csv file input
+            deepnote_variable_value: ""
+            deepnote_allowed_file_extensions: .csv
+        - id: 3a55603ccced4c62a5610c5cc5a52854
+          blockGroup: 22e563550e734e75b35252e4975c3110
+          sortingKey: "000012"
+          contentHash: 7a42015d
+          executionCount: 13
+          executionFinishedAt: 2025-11-05T16:42:18.520Z
+          executionStartedAt: 2025-11-05T16:42:18.520Z
+          type: button
+          content: ""
+          metadata:
+            execution_start: 1762360938520
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_button_title: Run
+            deepnote_button_color_scheme: blue
+            deepnote_button_behavior: set_variable
+            deepnote_variable_name: button_1
+        - id: 99b8d7cff8974f4194af0f96c03ea889
+          blockGroup: 10e193de0aec4f3c80946edf358777e5
+          sortingKey: "000013"
+          contentHash: d2580869
+          executionCount: 11
+          executionFinishedAt: 2025-11-05T16:42:18.422Z
+          executionStartedAt: 2025-11-05T16:42:18.422Z
+          type: input-date-range
+          content: ""
+          metadata:
+            execution_start: 1762360938422
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_11
+            deepnote_input_label: relative past 3 months
+            deepnote_variable_value: past3months
+        - id: 6e11805c153141fe98de192ffa1089ed
+          blockGroup: 2a1e97120eb24494adff278264625a4f
+          sortingKey: "000014"
+          contentHash: b623e53d
+          executionCount: 14
+          executionFinishedAt: 2025-11-05T16:42:18.580Z
+          executionStartedAt: 2025-11-05T16:42:18.580Z
+          type: button
+          content: ""
+          metadata:
+            execution_start: 1762360938580
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_button_title: Run notebook button
+            deepnote_button_color_scheme: blue
+            deepnote_button_behavior: run
+            deepnote_variable_name: button_1
+        - id: 4aac9adb58ea46058601c43a8be91edf
+          blockGroup: d92e5c3bc9564e34826d2908f1789d1d
+          sortingKey: "000015"
+          contentHash: f5407c30
+          executionCount: 14
+          executionFinishedAt: 2025-11-05T16:42:18.640Z
+          executionStartedAt: 2025-11-05T16:42:18.640Z
+          type: input-slider
+          content: ""
+          metadata:
+            execution_start: 1762360938640
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_13
+            deepnote_variable_value: "5"
+            deepnote_slider_min_value: 0
+            deepnote_slider_max_value: 10
+            deepnote_slider_step: 1
+        - id: 90db333d926f40549b478633a4a6ed4c
+          blockGroup: 1179eaaa91f64272b0f6658c1cb08ba2
+          sortingKey: "000016"
+          contentHash: 92582a26
+          executionCount: 15
+          executionFinishedAt: 2025-11-05T16:42:18.690Z
+          executionStartedAt: 2025-11-05T16:42:18.690Z
+          type: code
+          content: input_1
+          metadata:
+            execution_start: 1762360938690
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+      executionMode: block
+      id: 77966249fb2343fe81b30273979004ef
+      isModule: false
+      name: Notebook 3
+    - blocks:
+        - id: 0f753e1d6c0f4ddaa370bd12af3f4909
+          blockGroup: 34db431986dd48c9bfa339d3ec8ca7ad
+          sortingKey: "000000"
+          type: code
+          content: ""
+          metadata: {}
+        - id: 153fa753340b41069da2a2081f2dca26
+          blockGroup: 2dc0e1ddec8f45599e27026658125b1a
+          sortingKey: "000001"
+          contentHash: aa22d572
+          executionCount: 1
+          executionFinishedAt: 2025-12-23T07:52:16.386Z
+          executionStartedAt: 2025-12-23T07:52:14.239Z
+          type: sql
+          content: >2-
+                  WITH
+                    T AS (
+                      SELECT
+                        TABLES.table_schema AS table_schema,
+                        TABLES.table_name AS table_name,
+                        regexp_extract(TABLES.table_name, '^(.*)\\d{8}$') AS shard_prefix
+                      FROM INFORMATION_SCHEMA.TABLES AS TABLES
+                      WHERE TABLES.table_type IN ('BASE TABLE', 'VIEW', 'MATERIALIZED VIEW')
+                    )
+                  SELECT
+                    table_schema,
+                    COALESCE(shard_prefix, table_name) AS table_name,
+                    ARRAY_AGG(CASE WHEN shard_prefix IS NOT NULL THEN table_name END IGNORE NULLS)
+                      AS shard_table_names
+                  FROM T
+                  GROUP BY table_schema, table_name;
+          metadata:
+            execution_start: 1766476334239
+            execution_millis: 2147
+            execution_context_id: d9fbf24e-3069-4165-b71e-ec63f933b1be
+            deepnote_variable_name: df_1
+            sql_integration_id: e823e985-3f95-4a0b-8487-1b39480eb235
+      executionMode: block
+      id: d0f74ea0c52a4ca79b5dee220e456633
+      isModule: false
+      name: Notebook 4
+    - blocks:
+        - id: 696f87d4ab2a409c85b7a19c223e8e2b
+          blockGroup: 88223e49f24040e58d9dd1b4d8f61650
+          sortingKey: "000000"
+          type: code
+          content: print('hello word')
+          metadata: {}
+        - id: b50123ddc778415289258667ccf32b05
+          blockGroup: 5101179284b7443a93da4d8cf96c711e
+          sortingKey: "000001"
+          contentHash: 1a96f51d
+          executionCount: 4
+          executionFinishedAt: 2026-02-27T14:11:53.162Z
+          executionStartedAt: 2026-02-27T14:11:51.233Z
+          type: sql
+          content: >-
+            --- Some comment
+
+            SELECT * FROM rnacen.rna LIMIT 100
+          metadata:
+            execution_start: 1772201511233
+            execution_millis: 1929
+            execution_context_id: 7a1583c0-bd89-4026-bfc7-eebdbfe47214
+            deepnote_variable_name: df_2
+            sql_integration_id: 88f5e099-7229-4bd4-84dc-b28e96a29816
+        - id: 99a1e345175e41f3ba2b8edbf0116be4
+          blockGroup: c7d6b80ddfb945f28c2b6eeea2d12e8b
+          sortingKey: "000002"
+          type: sql
+          content: >-
+            select * from rnacen.rna
+
+            where rna_id = 'SRP000001'
+          metadata:
+            deepnote_variable_name: df_3
+            sql_integration_id: 88f5e099-7229-4bd4-84dc-b28e96a29816
+        - id: 481b776ebfd149acb98a217a163e3760
+          blockGroup: 6d7006bc5239470580ef4dcad516318e
+          sortingKey: "000003"
+          type: text-cell-p
+          content: ""
+          metadata:
+            formattedRanges: []
+        - id: c5af9de2d6464e32a4bbc0f95cbe8284
+          blockGroup: a7f256c7803349038b8040537899d26a
+          sortingKey: "000004"
+          type: markdown
+          content: some @mention
+          metadata: {}
+      executionMode: block
+      id: 51653c23672a48e2978ae9771f37f211
+      isModule: false
+      name: Postgres
+version: 1.0.0
