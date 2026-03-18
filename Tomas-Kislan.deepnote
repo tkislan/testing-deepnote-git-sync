@@ -3,6 +3,7 @@ execution: {}
 metadata:
   createdAt: 2025-10-03T09:46:24.570Z
   modifiedAt: 2026-03-18T18:36:00.919Z
+  snapshotHash: sha256:d5bb54e5264f4f08722c297bc2ce96b784921fe36bc6fc60899ccf36d6c6ea75
 project:
   id: e20bfc2e369c44c78745c2a0a50d46d3
   integrations:
@@ -870,16 +871,14 @@ project:
         - id: 696f87d4ab2a409c85b7a19c223e8e2b
           blockGroup: 88223e49f24040e58d9dd1b4d8f61650
           sortingKey: "000000"
+          contentHash: sha256:ae0970b41820099cc7062b31cf168dda18a1e769b024cb0f4651837ec92d4689
           type: code
           content: print('hello word')
           metadata: {}
         - id: b50123ddc778415289258667ccf32b05
           blockGroup: 5101179284b7443a93da4d8cf96c711e
           sortingKey: "000001"
-          contentHash: 1a96f51d
-          executionCount: 4
-          executionFinishedAt: 2026-02-27T14:11:53.162Z
-          executionStartedAt: 2026-02-27T14:11:51.233Z
+          contentHash: sha256:9d0c4da0481a761c366004fa36bfa71d3b700d4f905290cef6bf6365785a2cc0
           type: sql
           content: >-
             --- Some comment
@@ -894,11 +893,12 @@ project:
         - id: 99a1e345175e41f3ba2b8edbf0116be4
           blockGroup: c7d6b80ddfb945f28c2b6eeea2d12e8b
           sortingKey: "000002"
+          contentHash: sha256:da2e1ade464f41a6239f0ecb6cbd9e8d7f9ea12193ec0ee45398038eff876abb
           type: sql
           content: >-
             select * from rnacen.rna
 
-            where rna_id = 'SRP000001'
+            where upi is not null limit 15
           metadata:
             deepnote_variable_name: df_3
             sql_integration_id: 88f5e099-7229-4bd4-84dc-b28e96a29816
@@ -912,6 +912,7 @@ project:
         - id: c5af9de2d6464e32a4bbc0f95cbe8284
           blockGroup: a7f256c7803349038b8040537899d26a
           sortingKey: "000004"
+          contentHash: sha256:190e298518502459976f8339a8146bb4688fe13f5601a1238a4ecaacbd0c7901
           type: markdown
           content: some @mention
           metadata: {}
