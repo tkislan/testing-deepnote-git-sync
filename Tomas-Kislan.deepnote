@@ -2,7 +2,7 @@ environment: {}
 execution: {}
 metadata:
   createdAt: 2025-10-03T09:46:24.570Z
-  modifiedAt: 2026-03-19T10:22:04.520Z
+  modifiedAt: 2026-03-19T10:24:49.807Z
 project:
   id: e20bfc2e369c44c78745c2a0a50d46d3
   integrations:
@@ -29,36 +29,6 @@ project:
       type: pandas-dataframe
   name: Tomas Kislan
   notebooks:
-    - blocks:
-        - id: 89a95a06f3544f1a923e00817f56c9f5
-          blockGroup: 300cfc2250904a8fbaa6032a676ef0c9
-          sortingKey: "000000"
-          contentHash: sha256:780c7dc5df332d96dd6dafe25143c17d16bc6eed6ffce45b3ac860fe820f6de5
-          type: code
-          content: >
-            import pandas as pd
-
-
-            df = pd.DataFrame({
-                "name": ["Alice", "Bob", "Charlie", "Diana"],
-                "age": [28, 34, 45, 31],
-                "city": ["Prague", "Berlin", "London", "Paris"],
-            })
-
-            df
-          metadata: {}
-        - id: 7b3e4a1f9c2d48e6a5f0b8d3c1e7f942
-          blockGroup: 4e8a2c6f1d3b49a7b0c5e9f2d8a61c37
-          sortingKey: "000001"
-          contentHash: sha256:06b7079ba67eb32e9ae5ce881a76cedc9de28a992b7f788f35a224293ac00c88
-          type: code
-          content: >
-            df["name"]
-          metadata: {}
-      executionMode: block
-      id: 5ef2d63e3e9d45a2831ddc61ed4adbba
-      isModule: false
-      name: Notebook 1
     - blocks:
         - id: b19da2f03139491d8dc25aba2748c787
           blockGroup: 4b847a70900e48daae65b504ea269a10
