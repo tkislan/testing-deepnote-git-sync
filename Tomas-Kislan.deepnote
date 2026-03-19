@@ -2,8 +2,7 @@ environment: {}
 execution: {}
 metadata:
   createdAt: 2025-10-03T09:46:24.570Z
-  modifiedAt: 2026-03-19T10:19:23.136Z
-  snapshotHash: sha256:f02b1f1349d6fd408f95642e44d08c4521818282d7f76eab13bedb254d8f17b2
+  modifiedAt: 2026-03-19T10:22:04.520Z
 project:
   id: e20bfc2e369c44c78745c2a0a50d46d3
   integrations:
@@ -783,32 +782,4 @@ project:
       id: 51653c23672a48e2978ae9771f37f211
       isModule: false
       name: Postgres
-    - blocks:
-        - id: 89a95a06f3544f1a923e00817f56c9f5
-          blockGroup: 300cfc2250904a8fbaa6032a676ef0c9
-          sortingKey: "000000"
-          type: code
-          content: >
-            import pandas as pd
-
-
-            df = pd.DataFrame({
-                "name": ["Alice", "Bob", "Charlie", "Diana"],
-                "age": [28, 34, 45, 31],
-                "city": ["Prague", "Berlin", "London", "Paris"],
-            })
-
-            df
-          metadata: {}
-        - id: 7b3e4a1f9c2d48e6a5f0b8d3c1e7f942
-          blockGroup: 4e8a2c6f1d3b49a7b0c5e9f2d8a61c37
-          sortingKey: "000001"
-          type: code
-          content: >
-            df["name"]
-          metadata: {}
-      executionMode: block
-      id: 3c8e62eb101f421f98181e54f16e06a2
-      isModule: false
-      name: Dummy
 version: 1.0.0
