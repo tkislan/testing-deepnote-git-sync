@@ -2,7 +2,8 @@ environment: {}
 execution: {}
 metadata:
   createdAt: 2025-10-03T09:46:24.570Z
-  modifiedAt: 2026-03-19T10:24:49.807Z
+  modifiedAt: 2026-03-19T10:49:54.169Z
+  snapshotHash: sha256:3de473e0277495ed07fbf0bf1d949ce768b442410ebb2489fe62e2361c043837
 project:
   id: e20bfc2e369c44c78745c2a0a50d46d3
   integrations:
@@ -700,56 +701,63 @@ project:
       isModule: false
       name: Notebook 4
     - blocks:
-        - id: 696f87d4ab2a409c85b7a19c223e8e2b
-          blockGroup: 88223e49f24040e58d9dd1b4d8f61650
+        - id: a3b7c9d1e5f2481090ab3c6d8e7f1a24
+          blockGroup: f1e2d3c4b5a6978801234567abcdef90
           sortingKey: "000000"
-          contentHash: sha256:ae0970b41820099cc7062b31cf168dda18a1e769b024cb0f4651837ec92d4689
+          contentHash: sha256:c68ad549b48efc4220ae5b755965b3865981e3b0cbb80613c3a41233584e543d
           type: code
-          content: print('hello word')
+          content: >
+            import pandas as pd
+
+
+            df = pd.DataFrame({
+                "name": ["Alice", "Bob", "Charlie", "Diana"],
+                "age": [28, 34, 45, 23],
+                "score": [88.5, 92.3, 76.1, 50],
+            })
+
+            df
           metadata: {}
-        - id: b50123ddc778415289258667ccf32b05
-          blockGroup: 5101179284b7443a93da4d8cf96c711e
+        - id: c4d5e6f7a8b9012345678901abcdef12
+          blockGroup: 12345678abcdef90a1b2c3d4e5f60718
           sortingKey: "000001"
-          contentHash: sha256:9d0c4da0481a761c366004fa36bfa71d3b700d4f905290cef6bf6365785a2cc0
-          type: sql
-          content: >-
-            --- Some comment
-
-            SELECT * FROM rnacen.rna LIMIT 100
-          metadata:
-            execution_start: 1772201511233
-            execution_millis: 1929
-            execution_context_id: 7a1583c0-bd89-4026-bfc7-eebdbfe47214
-            deepnote_variable_name: df_2
-            sql_integration_id: 88f5e099-7229-4bd4-84dc-b28e96a29816
-        - id: 99a1e345175e41f3ba2b8edbf0116be4
-          blockGroup: c7d6b80ddfb945f28c2b6eeea2d12e8b
-          sortingKey: "000002"
-          contentHash: sha256:da2e1ade464f41a6239f0ecb6cbd9e8d7f9ea12193ec0ee45398038eff876abb
-          type: sql
-          content: >-
-            select * from rnacen.rna
-
-            where upi is not null limit 15
-          metadata:
-            deepnote_variable_name: df_3
-            sql_integration_id: 88f5e099-7229-4bd4-84dc-b28e96a29816
-        - id: 481b776ebfd149acb98a217a163e3760
-          blockGroup: 6d7006bc5239470580ef4dcad516318e
-          sortingKey: "000003"
-          type: text-cell-p
-          content: ""
-          metadata:
-            formattedRanges: []
-        - id: c5af9de2d6464e32a4bbc0f95cbe8284
-          blockGroup: a7f256c7803349038b8040537899d26a
-          sortingKey: "000004"
-          contentHash: sha256:190e298518502459976f8339a8146bb4688fe13f5601a1238a4ecaacbd0c7901
-          type: markdown
-          content: some @mention
+          contentHash: sha256:06b7079ba67eb32e9ae5ce881a76cedc9de28a992b7f788f35a224293ac00c88
+          type: code
+          content: >
+            df["name"]
           metadata: {}
       executionMode: block
       id: 51653c23672a48e2978ae9771f37f211
       isModule: false
       name: Postgres
+    - blocks:
+        - id: a3b7c9d1e5f2481090ab3c6d8e7f1a24
+          blockGroup: f1e2d3c4b5a6978801234567abcdef90
+          sortingKey: "000000"
+          contentHash: sha256:c68ad549b48efc4220ae5b755965b3865981e3b0cbb80613c3a41233584e543d
+          type: code
+          content: >
+            import pandas as pd
+
+
+            df = pd.DataFrame({
+                "name": ["Alice", "Bob", "Charlie", "Diana"],
+                "age": [28, 34, 45, 23],
+                "score": [88.5, 92.3, 76.1, 50],
+            })
+
+            df
+          metadata: {}
+        - id: c4d5e6f7a8b9012345678901abcdef12
+          blockGroup: 12345678abcdef90a1b2c3d4e5f60718
+          sortingKey: "000001"
+          contentHash: sha256:06b7079ba67eb32e9ae5ce881a76cedc9de28a992b7f788f35a224293ac00c88
+          type: code
+          content: >
+            df["name"]
+          metadata: {}
+      executionMode: block
+      id: 7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d
+      isModule: false
+      name: Dummy
 version: 1.0.0
