@@ -2,8 +2,7 @@ environment: {}
 execution: {}
 metadata:
   createdAt: 2025-10-03T09:46:24.570Z
-  modifiedAt: 2026-03-19T10:49:54.169Z
-  snapshotHash: sha256:3de473e0277495ed07fbf0bf1d949ce768b442410ebb2489fe62e2361c043837
+  modifiedAt: 2026-03-19T10:51:22.366Z
 project:
   id: e20bfc2e369c44c78745c2a0a50d46d3
   integrations:
@@ -25,17 +24,55 @@ project:
     - id: a2d95f48-81e5-46fc-bcb0-29779c06b3cd
       name: testing_deepnote_git_sync
       type: github_package
-    - id: f4a1c8e2-9b3d-4e7f-a5c6-8d2e1f0b3a49
-      name: DataFrame SQL
-      type: pandas-dataframe
   name: Tomas Kislan
   notebooks:
+    - blocks:
+        - id: a3b7c9d1e5f2481090ab3c6d8e7f1a24
+          blockGroup: f1e2d3c4b5a6978801234567abcdef90
+          sortingKey: "000000"
+          contentHash: 749f1d7c
+          executionCount: 7
+          executionFinishedAt: 2026-03-19T10:51:06.920Z
+          executionStartedAt: 2026-03-19T10:51:06.919Z
+          type: code
+          content: >
+            import pandas as pd
+
+
+            df = pd.DataFrame({
+                "name": ["Tomas", "Bob", "Charlie", "Diana"],
+                "age": [28, 34, 45, 23],
+                "score": [88.5, 92.3, 76.1, 50],
+            })
+
+            df
+          metadata:
+            execution_start: 1773917466919
+            execution_millis: 1
+            execution_context_id: bfbe6f25-9e93-4798-ab08-a711b48545df
+        - id: c4d5e6f7a8b9012345678901abcdef12
+          blockGroup: 12345678abcdef90a1b2c3d4e5f60718
+          sortingKey: "000001"
+          contentHash: 8dffaf44
+          executionCount: 4
+          executionFinishedAt: 2026-03-19T10:50:57.613Z
+          executionStartedAt: 2026-03-19T10:50:57.612Z
+          type: code
+          content: >
+            df["name"]
+          metadata:
+            execution_start: 1773917457612
+            execution_millis: 1
+            execution_context_id: bfbe6f25-9e93-4798-ab08-a711b48545df
+      executionMode: block
+      id: 7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d
+      isModule: false
+      name: Dummy
     - blocks:
         - id: b19da2f03139491d8dc25aba2748c787
           blockGroup: 4b847a70900e48daae65b504ea269a10
           sortingKey: "000000"
           contentHash: f678b0fb
-          executionCount: 4
           executionFinishedAt: 2025-12-30T09:38:09.606Z
           executionStartedAt: 2025-12-30T09:38:05.099Z
           type: sql
@@ -84,7 +121,6 @@ project:
           blockGroup: 61c7f70c30a4480d9fcd2f11e0b34be7
           sortingKey: "000001"
           contentHash: 2e108fa0
-          executionCount: 7
           executionFinishedAt: 2025-12-30T09:38:39.420Z
           executionStartedAt: 2025-12-30T09:38:39.420Z
           type: code
@@ -102,7 +138,6 @@ project:
           blockGroup: 85287841751140d2b7d8040d8c151e40
           sortingKey: "000002"
           contentHash: 8e116b85
-          executionCount: 1
           executionFinishedAt: 2025-11-22T10:14:11.323Z
           executionStartedAt: 2025-11-22T10:14:09.719Z
           type: sql
@@ -128,7 +163,6 @@ project:
           blockGroup: e55c670a52194ad89c75a8629b8289a3
           sortingKey: "000004"
           contentHash: fce8c699
-          executionCount: 1
           executionFinishedAt: 2025-12-16T14:29:52.588Z
           executionStartedAt: 2025-12-16T14:29:51.409Z
           type: sql
@@ -143,7 +177,6 @@ project:
           blockGroup: d5a01db7177542bdb6a0bcacb3eb6aea
           sortingKey: "000005"
           contentHash: 80fd510
-          executionCount: 4
           executionFinishedAt: 2025-12-16T14:46:15.247Z
           executionStartedAt: 2025-12-16T14:46:13.919Z
           type: sql
@@ -154,30 +187,10 @@ project:
             execution_context_id: 5ee76857-8581-4214-8690-d045c6c26bc3
             deepnote_variable_name: df_9
             sql_integration_id: 2fa61b86-663b-4093-918b-d2f2e155b075
-        - id: e8ee9783bce345698bbf91823dfcd0f4
-          blockGroup: 0dccc1850d1a455599b2819bb574ee11
-          sortingKey: "000006"
-          contentHash: 752cb926
-          executionCount: 2
-          executionFinishedAt: 2025-11-22T09:21:29.874Z
-          executionStartedAt: 2025-11-22T09:21:29.345Z
-          type: sql
-          content: >-
-            select * from deepnote_production_view.active_plans
-
-            limit 100;
-          metadata:
-            execution_start: 1763803289345
-            execution_millis: 529
-            execution_context_id: a700e648-4d0d-4a0b-b238-7fb6f491a0ba
-            deepnote_variable_name: query_2
-            deepnote_return_variable_type: query_preview
-            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
         - id: 91d07f89557c4001bf67ae1edf0d0b97
           blockGroup: 6bd7d9c6883043febfb49201189128a9
-          sortingKey: "000007"
+          sortingKey: "000006"
           contentHash: 3b029733
-          executionCount: 3
           executionFinishedAt: 2025-11-22T09:21:32.673Z
           executionStartedAt: 2025-11-22T09:21:29.945Z
           type: sql
@@ -241,9 +254,8 @@ project:
             deepnote_table_loading: false
         - id: 19f9cd4b31384f71a000347585dc1483
           blockGroup: 9810a727591f42d6bcb3469129a938f3
-          sortingKey: "000008"
+          sortingKey: "000007"
           contentHash: 79f544d3
-          executionCount: 4
           executionFinishedAt: 2025-11-22T09:21:35.313Z
           executionStartedAt: 2025-11-22T09:21:32.735Z
           type: sql
@@ -270,11 +282,28 @@ project:
             deepnote_variable_name: query_4
             deepnote_return_variable_type: query_preview
             sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+        - id: e8ee9783bce345698bbf91823dfcd0f4
+          blockGroup: 0dccc1850d1a455599b2819bb574ee11
+          sortingKey: "000008"
+          contentHash: 752cb926
+          executionFinishedAt: 2025-11-22T09:21:29.874Z
+          executionStartedAt: 2025-11-22T09:21:29.345Z
+          type: sql
+          content: >-
+            select * from deepnote_production_view.active_plans
+
+            limit 100;
+          metadata:
+            execution_start: 1763803289345
+            execution_millis: 529
+            execution_context_id: a700e648-4d0d-4a0b-b238-7fb6f491a0ba
+            deepnote_variable_name: query_2
+            deepnote_return_variable_type: query_preview
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
         - id: e6cbd30c7f1d4b0fb501e84edaf10c57
           blockGroup: 4d21039824544bfa8ea546732dba57bf
           sortingKey: "000009"
           contentHash: fe90607c
-          executionCount: 5
           executionFinishedAt: 2025-11-22T09:21:35.953Z
           executionStartedAt: 2025-11-22T09:21:35.360Z
           type: sql
@@ -304,33 +333,32 @@ project:
           type: markdown
           content: ""
           metadata: {}
-        - id: 171aa5101100407db099248c75201a2b
-          blockGroup: a5d5fa99b84c45c0bcaec0c5a7849983
-          sortingKey: "000012"
-          type: text-cell-todo
-          content: ""
-          metadata:
-            formattedRanges: []
-            checked: false
         - id: b4fdfdeb0b854af8ab3305854782c7e5
           blockGroup: 8c67dacf1f33421db5530cb2af486d9e
-          sortingKey: "000013"
+          sortingKey: "000012"
           type: text-cell-p
           content: Some paragraph
           metadata:
             formattedRanges: []
         - id: 1c277614e3c742a89abf9e17bd782b10
           blockGroup: 0159917315704a8a8e71ea049c3a1ed3
-          sortingKey: "000014"
+          sortingKey: "000013"
           type: text-cell-h1
           content: Some header
           metadata:
             formattedRanges: []
+        - id: 171aa5101100407db099248c75201a2b
+          blockGroup: a5d5fa99b84c45c0bcaec0c5a7849983
+          sortingKey: "000014"
+          type: text-cell-todo
+          content: ""
+          metadata:
+            formattedRanges: []
+            checked: false
         - id: 42fa37445acd4209925d9825a48aa4da
           blockGroup: 91c5a8a3a55c46b58b161a9dec4e7ecb
           sortingKey: "000015"
           contentHash: b4408b03
-          executionCount: 1
           executionFinishedAt: 2026-01-23T17:05:31.187Z
           executionStartedAt: 2026-01-23T17:05:29.515Z
           type: sql
@@ -360,7 +388,6 @@ project:
           blockGroup: 92f21410c8c54ac0be7e4d2a544552ee
           sortingKey: "000001"
           contentHash: a0e913da
-          executionCount: 1
           executionFinishedAt: 2025-11-05T16:42:17.902Z
           executionStartedAt: 2025-11-05T16:42:17.901Z
           type: input-text
@@ -377,7 +404,6 @@ project:
           blockGroup: 2b5f9340349f4baaa5a3237331214352
           sortingKey: "000002"
           contentHash: c80fe853
-          executionCount: 2
           executionFinishedAt: 2025-11-05T16:42:17.950Z
           executionStartedAt: 2025-11-05T16:42:17.950Z
           type: input-textarea
@@ -395,7 +421,6 @@ project:
           blockGroup: ba248341bdd94b93a234777968bfedcf
           sortingKey: "000003"
           contentHash: a5ebb576
-          executionCount: 3
           executionFinishedAt: 2025-11-05T16:42:18.000Z
           executionStartedAt: 2025-11-05T16:42:18.000Z
           type: input-select
@@ -419,7 +444,6 @@ project:
           blockGroup: 9f77387639cd432bb913890dea32b6c3
           sortingKey: "000004"
           contentHash: 227e70a9
-          executionCount: 4
           executionFinishedAt: 2025-11-05T16:42:18.050Z
           executionStartedAt: 2025-11-05T16:42:18.050Z
           type: input-select
@@ -445,7 +469,6 @@ project:
           blockGroup: e867ead6336e406992c632f315d8316b
           sortingKey: "000005"
           contentHash: d20bd87b
-          executionCount: 6
           executionFinishedAt: 2025-11-05T16:42:18.150Z
           executionStartedAt: 2025-11-05T16:42:18.150Z
           type: input-slider
@@ -461,30 +484,10 @@ project:
             deepnote_slider_min_value: 0
             deepnote_slider_max_value: 10
             deepnote_slider_step: 1
-        - id: f5a07f04cd874b498dc8873cf468a818
-          blockGroup: a28007ff7c7f4a9d831e7b92fe8f038c
-          sortingKey: "000006"
-          contentHash: 569e2a31
-          executionCount: 7
-          executionFinishedAt: 2025-11-05T16:42:18.200Z
-          executionStartedAt: 2025-11-05T16:42:18.200Z
-          type: input-slider
-          content: ""
-          metadata:
-            execution_start: 1762360938200
-            execution_millis: 0
-            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
-            deepnote_variable_name: input_7
-            deepnote_input_label: step size 2
-            deepnote_variable_value: "6"
-            deepnote_slider_min_value: 4
-            deepnote_slider_max_value: 10
-            deepnote_slider_step: 2
         - id: 09a0f5e21eb44a2eb8551b9ea5eeb74d
           blockGroup: 146c4af1efb2448fa2d3b7cfbd30da77
-          sortingKey: "000007"
+          sortingKey: "000006"
           contentHash: 4dfaf9fe
-          executionCount: 5
           executionFinishedAt: 2025-11-05T16:42:18.100Z
           executionStartedAt: 2025-11-05T16:42:18.100Z
           type: input-select
@@ -508,9 +511,8 @@ project:
             deepnote_allow_empty_values: true
         - id: 4d2f7cad7f3148ab8f9b0dcd8082e9be
           blockGroup: 5dd57f6bb90b49ebb954f6247b26427d
-          sortingKey: "000008"
+          sortingKey: "000007"
           contentHash: dd68f6b8
-          executionCount: 8
           executionFinishedAt: 2025-11-05T16:42:18.260Z
           executionStartedAt: 2025-11-05T16:42:18.260Z
           type: input-checkbox
@@ -522,11 +524,28 @@ project:
             deepnote_variable_name: input_8
             deepnote_input_label: ""
             deepnote_variable_value: true
+        - id: f5a07f04cd874b498dc8873cf468a818
+          blockGroup: a28007ff7c7f4a9d831e7b92fe8f038c
+          sortingKey: "000008"
+          contentHash: 569e2a31
+          executionFinishedAt: 2025-11-05T16:42:18.200Z
+          executionStartedAt: 2025-11-05T16:42:18.200Z
+          type: input-slider
+          content: ""
+          metadata:
+            execution_start: 1762360938200
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_variable_name: input_7
+            deepnote_input_label: step size 2
+            deepnote_variable_value: "6"
+            deepnote_slider_min_value: 4
+            deepnote_slider_max_value: 10
+            deepnote_slider_step: 2
         - id: c9c0b2feb34042cab80f5c4076caa964
           blockGroup: e84010446b844a86a1f6bbe5d89dc798
           sortingKey: "000009"
           contentHash: e1ac03e6
-          executionCount: 9
           executionFinishedAt: 2025-11-05T16:42:18.314Z
           executionStartedAt: 2025-11-05T16:42:18.314Z
           type: input-date
@@ -543,7 +562,6 @@ project:
           blockGroup: 1fe36d4de4f04fefbe80cdd0d1a3ad3b
           sortingKey: "000010"
           contentHash: 72a8125b
-          executionCount: 10
           executionFinishedAt: 2025-11-05T16:42:18.370Z
           executionStartedAt: 2025-11-05T16:42:18.370Z
           type: input-date-range
@@ -560,7 +578,6 @@ project:
           blockGroup: 651f4f5db96b43d5a6a1a492935fa08d
           sortingKey: "000011"
           contentHash: bbfb2f9
-          executionCount: 12
           executionFinishedAt: 2025-11-05T16:42:18.470Z
           executionStartedAt: 2025-11-05T16:42:18.470Z
           type: input-file
@@ -573,28 +590,10 @@ project:
             deepnote_input_label: csv file input
             deepnote_variable_value: ""
             deepnote_allowed_file_extensions: .csv
-        - id: 3a55603ccced4c62a5610c5cc5a52854
-          blockGroup: 22e563550e734e75b35252e4975c3110
-          sortingKey: "000012"
-          contentHash: 7a42015d
-          executionCount: 13
-          executionFinishedAt: 2025-11-05T16:42:18.520Z
-          executionStartedAt: 2025-11-05T16:42:18.520Z
-          type: button
-          content: ""
-          metadata:
-            execution_start: 1762360938520
-            execution_millis: 0
-            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
-            deepnote_button_title: Run
-            deepnote_button_color_scheme: blue
-            deepnote_button_behavior: set_variable
-            deepnote_variable_name: button_1
         - id: 99b8d7cff8974f4194af0f96c03ea889
           blockGroup: 10e193de0aec4f3c80946edf358777e5
-          sortingKey: "000013"
+          sortingKey: "000012"
           contentHash: d2580869
-          executionCount: 11
           executionFinishedAt: 2025-11-05T16:42:18.422Z
           executionStartedAt: 2025-11-05T16:42:18.422Z
           type: input-date-range
@@ -608,9 +607,8 @@ project:
             deepnote_variable_value: past3months
         - id: 6e11805c153141fe98de192ffa1089ed
           blockGroup: 2a1e97120eb24494adff278264625a4f
-          sortingKey: "000014"
+          sortingKey: "000013"
           contentHash: b623e53d
-          executionCount: 14
           executionFinishedAt: 2025-11-05T16:42:18.580Z
           executionStartedAt: 2025-11-05T16:42:18.580Z
           type: button
@@ -623,11 +621,26 @@ project:
             deepnote_button_color_scheme: blue
             deepnote_button_behavior: run
             deepnote_variable_name: button_1
+        - id: 3a55603ccced4c62a5610c5cc5a52854
+          blockGroup: 22e563550e734e75b35252e4975c3110
+          sortingKey: "000014"
+          contentHash: 7a42015d
+          executionFinishedAt: 2025-11-05T16:42:18.520Z
+          executionStartedAt: 2025-11-05T16:42:18.520Z
+          type: button
+          content: ""
+          metadata:
+            execution_start: 1762360938520
+            execution_millis: 0
+            execution_context_id: 2098971e-5e9e-4466-b9fb-e33353f6f695
+            deepnote_button_title: Run
+            deepnote_button_color_scheme: blue
+            deepnote_button_behavior: set_variable
+            deepnote_variable_name: button_1
         - id: 4aac9adb58ea46058601c43a8be91edf
           blockGroup: d92e5c3bc9564e34826d2908f1789d1d
           sortingKey: "000015"
           contentHash: f5407c30
-          executionCount: 14
           executionFinishedAt: 2025-11-05T16:42:18.640Z
           executionStartedAt: 2025-11-05T16:42:18.640Z
           type: input-slider
@@ -645,7 +658,6 @@ project:
           blockGroup: 1179eaaa91f64272b0f6658c1cb08ba2
           sortingKey: "000016"
           contentHash: 92582a26
-          executionCount: 15
           executionFinishedAt: 2025-11-05T16:42:18.690Z
           executionStartedAt: 2025-11-05T16:42:18.690Z
           type: code
@@ -669,7 +681,6 @@ project:
           blockGroup: 2dc0e1ddec8f45599e27026658125b1a
           sortingKey: "000001"
           contentHash: aa22d572
-          executionCount: 1
           executionFinishedAt: 2025-12-23T07:52:16.386Z
           executionStartedAt: 2025-12-23T07:52:14.239Z
           type: sql
@@ -730,34 +741,4 @@ project:
       id: 51653c23672a48e2978ae9771f37f211
       isModule: false
       name: Postgres
-    - blocks:
-        - id: a3b7c9d1e5f2481090ab3c6d8e7f1a24
-          blockGroup: f1e2d3c4b5a6978801234567abcdef90
-          sortingKey: "000000"
-          contentHash: sha256:c68ad549b48efc4220ae5b755965b3865981e3b0cbb80613c3a41233584e543d
-          type: code
-          content: >
-            import pandas as pd
-
-
-            df = pd.DataFrame({
-                "name": ["Alice", "Bob", "Charlie", "Diana"],
-                "age": [28, 34, 45, 23],
-                "score": [88.5, 92.3, 76.1, 50],
-            })
-
-            df
-          metadata: {}
-        - id: c4d5e6f7a8b9012345678901abcdef12
-          blockGroup: 12345678abcdef90a1b2c3d4e5f60718
-          sortingKey: "000001"
-          contentHash: sha256:06b7079ba67eb32e9ae5ce881a76cedc9de28a992b7f788f35a224293ac00c88
-          type: code
-          content: >
-            df["name"]
-          metadata: {}
-      executionMode: block
-      id: 7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d
-      isModule: false
-      name: Dummy
 version: 1.0.0
