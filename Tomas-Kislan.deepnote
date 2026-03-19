@@ -2,7 +2,8 @@ environment: {}
 execution: {}
 metadata:
   createdAt: 2025-10-03T09:46:24.570Z
-  modifiedAt: 2026-03-19T10:11:16.993Z
+  modifiedAt: 2026-03-19T10:19:23.136Z
+  snapshotHash: sha256:f02b1f1349d6fd408f95642e44d08c4521818282d7f76eab13bedb254d8f17b2
 project:
   id: e20bfc2e369c44c78745c2a0a50d46d3
   integrations:
@@ -24,174 +25,37 @@ project:
     - id: a2d95f48-81e5-46fc-bcb0-29779c06b3cd
       name: testing_deepnote_git_sync
       type: github_package
+    - id: f4a1c8e2-9b3d-4e7f-a5c6-8d2e1f0b3a49
+      name: DataFrame SQL
+      type: pandas-dataframe
   name: Tomas Kislan
   notebooks:
     - blocks:
-        - id: ea277a38e8a04280884c21907eb66907
-          blockGroup: e74c75c1b72f4306917f8c0e698c89d7
+        - id: 89a95a06f3544f1a923e00817f56c9f5
+          blockGroup: 300cfc2250904a8fbaa6032a676ef0c9
           sortingKey: "000000"
-          type: text-cell-p
-          content: ""
-          metadata:
-            formattedRanges: []
-        - id: 8723c33fb2434a67b8d16265441c380e
-          blockGroup: c780b36cfecd43d694d4e5f337e86c2d
-          sortingKey: "000001"
-          contentHash: 709b1b50
-          executionCount: 1
-          executionFinishedAt: 2025-11-12T09:38:03.950Z
-          executionStartedAt: 2025-11-12T09:38:03.627Z
+          contentHash: sha256:780c7dc5df332d96dd6dafe25143c17d16bc6eed6ffce45b3ac860fe820f6de5
           type: code
-          content: >-
+          content: >
             import pandas as pd
 
-            df = pd.read_json('profile.json')
-          metadata:
-            execution_start: 1762940283627
-            execution_millis: 323
-            execution_context_id: 86666579-1db6-4923-81b1-f0ca13031250
-        - id: aa4324deb7ab4710abdc7195bb54fe39
-          blockGroup: eecca6de19ac4c57af7502878cc444ca
-          sortingKey: "000002"
-          contentHash: f804c160
-          executionCount: 10
-          executionFinishedAt: 2025-10-09T10:19:46.629Z
-          executionStartedAt: 2025-10-09T10:19:46.628Z
+
+            df = pd.DataFrame({
+                "name": ["Alice", "Bob", "Charlie", "Diana"],
+                "age": [28, 34, 45, 31],
+                "city": ["Prague", "Berlin", "London", "Paris"],
+            })
+
+            df
+          metadata: {}
+        - id: 7b3e4a1f9c2d48e6a5f0b8d3c1e7f942
+          blockGroup: 4e8a2c6f1d3b49a7b0c5e9f2d8a61c37
+          sortingKey: "000001"
+          contentHash: sha256:06b7079ba67eb32e9ae5ce881a76cedc9de28a992b7f788f35a224293ac00c88
           type: code
-          content: df
-          metadata:
-            execution_start: 1760005186628
-            execution_millis: 1
-            execution_context_id: 0234ca19-9960-4f3b-8192-4580e726b4ac
-        - id: 8d20984e93164e29a17ac4fd9df68d34
-          blockGroup: 1a33d6faebcc4ff0b3410edf6fce204b
-          sortingKey: "000003"
-          contentHash: f20a5cbc
-          executionCount: 16
-          executionFinishedAt: 2025-10-09T10:20:07.477Z
-          executionStartedAt: 2025-10-09T10:20:07.465Z
-          type: visualization
-          content: ""
-          metadata:
-            execution_start: 1760005207465
-            execution_millis: 12
-            execution_context_id: 0234ca19-9960-4f3b-8192-4580e726b4ac
-            deepnote_variable_name: df
-            deepnote_visualization_spec:
-              layer:
-                - layer:
-                    - layer:
-                        - mark:
-                            clip: true
-                            type: bar
-                            color: "#2266D3"
-                            tooltip: true
-                          encoding:
-                            x:
-                              sort: null
-                              type: nominal
-                              field: name
-                              scale:
-                                type: linear
-                            y:
-                              axis:
-                                format:
-                                  type: default
-                                  decimals: null
-                                formatType: numberFormatFromNumberType
-                              type: quantitative
-                              field: dur
-                              scale:
-                                type: linear
-                              format:
-                                type: default
-                                decimals: null
-                              aggregate: sum
-                              formatType: numberFormatFromNumberType
-                            color:
-                              type: nominal
-                              datum: dur
-                              scale:
-                                range:
-                                  - "#2266D3"
-                                domain:
-                                  - dur
-                            xOffset:
-                              datum: series_0
-                          transform: []
-                  resolve:
-                    scale:
-                      color: independent
-              title: ""
-              config:
-                legend:
-                  disable: false
-              $schema: https://vega.github.io/schema/vega-lite/v5.json
-              encoding: {}
-              usermeta:
-                seriesNames:
-                  - dur
-                seriesOrder:
-                  - 0
-                specSchemaVersion: 2
-                tooltipDefaultMode: true
-        - id: 6ce1f40aeb754c4c89aaabf61a79d20d
-          blockGroup: 5af7f305b16f4c35ac8dcff802d9df54
-          sortingKey: "000004"
-          contentHash: 569fd661
-          executionCount: 1
-          executionFinishedAt: 2025-10-13T08:32:59.466Z
-          executionStartedAt: 2025-10-13T08:32:59.465Z
-          type: input-slider
-          content: ""
-          metadata:
-            execution_start: 1760344379465
-            execution_millis: 1
-            execution_context_id: 355a0b58-bc0f-4d7f-b108-731ab0cfa4b0
-            deepnote_variable_name: input_1
-            deepnote_input_label: ""
-            deepnote_variable_value: "8"
-            deepnote_slider_min_value: 0
-            deepnote_slider_max_value: 10
-            deepnote_slider_step: 1
-        - id: 1ad573e70b2340c6a2f80d684700f248
-          blockGroup: f2a56f11e43c4fc2b8c631ddf5b206d9
-          sortingKey: "000005"
-          contentHash: 6ce47c81
-          executionCount: 4
-          executionFinishedAt: 2025-11-12T09:38:53.337Z
-          executionStartedAt: 2025-11-12T09:38:53.337Z
-          type: input-select
-          content: ""
-          metadata:
-            execution_start: 1762940333337
-            execution_millis: 0
-            execution_context_id: 86666579-1db6-4923-81b1-f0ca13031250
-            deepnote_variable_name: input_2
-            deepnote_input_label: ""
-            deepnote_variable_value: Option 1
-            deepnote_variable_default_value: ""
-            deepnote_variable_options:
-              - Option 1
-              - Option 2
-            deepnote_variable_custom_options:
-              - Option 1
-              - Option 2
-            deepnote_variable_selected_variable: ""
-            deepnote_variable_select_type: from-options
-        - id: df83c3f6dae546dea026866462fa28de
-          blockGroup: 2c7745e44c2b4912b7094256d06648bf
-          sortingKey: "000006"
-          contentHash: 292c12ef
-          executionCount: 7
-          executionFinishedAt: 2025-11-12T09:39:00.151Z
-          executionStartedAt: 2025-11-12T09:39:00.150Z
-          type: code
-          content: input_2
-          metadata:
-            execution_start: 1762940340150
-            execution_millis: 1
-            execution_context_id: 86666579-1db6-4923-81b1-f0ca13031250
+          content: >
+            df["name"]
+          metadata: {}
       executionMode: block
       id: 5ef2d63e3e9d45a2831ddc61ed4adbba
       isModule: false
@@ -919,4 +783,32 @@ project:
       id: 51653c23672a48e2978ae9771f37f211
       isModule: false
       name: Postgres
+    - blocks:
+        - id: 89a95a06f3544f1a923e00817f56c9f5
+          blockGroup: 300cfc2250904a8fbaa6032a676ef0c9
+          sortingKey: "000000"
+          type: code
+          content: >
+            import pandas as pd
+
+
+            df = pd.DataFrame({
+                "name": ["Alice", "Bob", "Charlie", "Diana"],
+                "age": [28, 34, 45, 31],
+                "city": ["Prague", "Berlin", "London", "Paris"],
+            })
+
+            df
+          metadata: {}
+        - id: 7b3e4a1f9c2d48e6a5f0b8d3c1e7f942
+          blockGroup: 4e8a2c6f1d3b49a7b0c5e9f2d8a61c37
+          sortingKey: "000001"
+          type: code
+          content: >
+            df["name"]
+          metadata: {}
+      executionMode: block
+      id: 3c8e62eb101f421f98181e54f16e06a2
+      isModule: false
+      name: Dummy
 version: 1.0.0
