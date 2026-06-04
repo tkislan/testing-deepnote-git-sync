@@ -1,0 +1,46 @@
+environment: {}
+execution: {}
+metadata:
+  createdAt: 2026-06-03T13:28:41.371Z
+  modifiedAt: 2026-06-04T06:36:49.073Z
+project:
+  id: 23b3b590-fe38-4392-ad07-b00fb5efc76d
+  integrations:
+    - id: 08ab5e60-059b-477e-a42f-b02aebf67917
+      name: github_repo
+      type: github_package
+  name: Git test
+  notebooks:
+    - blocks:
+        - id: 2d3b3d4397664401a7ea13a64a660d97
+          blockGroup: e186af72e736401e9ecf6de370d1522f
+          sortingKey: "000000"
+          contentHash: 1590607a
+          type: code
+          content: a = 20
+          metadata:
+            execution_context_id: 36c3555d-ba3e-43b6-8c98-ebc8824fba8a
+        - id: f1a18bc6976744c1b0c79fe4feee806e
+          blockGroup: d014149c52f149519090dd4b4cc68368
+          sortingKey: "000001"
+          contentHash: eef322ab
+          type: code
+          content: b = 30
+          metadata:
+            execution_context_id: 36c3555d-ba3e-43b6-8c98-ebc8824fba8a
+        - id: 3e029d31c8804d4398d2581af3924e1f
+          blockGroup: 43a97ee7e54d4b3db5326ac8762c4df2
+          sortingKey: "000002"
+          contentHash: f7ce7a9c
+          type: code
+          content: >-
+            c = a + b
+
+            c
+          metadata:
+            execution_context_id: 36c3555d-ba3e-43b6-8c98-ebc8824fba8a
+      executionMode: block
+      id: ebfd45d6acb440b8a805ef6df676904a
+      isModule: false
+      name: Notebook 2
+version: 1.0.0

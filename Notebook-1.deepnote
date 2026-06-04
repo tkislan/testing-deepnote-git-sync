@@ -1,0 +1,27 @@
+environment: {}
+execution: {}
+metadata:
+  createdAt: 2026-06-03T13:28:41.371Z
+  modifiedAt: 2026-06-04T06:36:49.081Z
+project:
+  id: 23b3b590-fe38-4392-ad07-b00fb5efc76d
+  integrations:
+    - id: 08ab5e60-059b-477e-a42f-b02aebf67917
+      name: github_repo
+      type: github_package
+  name: Git test
+  notebooks:
+    - blocks:
+        - id: 93ed063c114e4f7380ab0acd5f222ea8
+          blockGroup: 62fec0fa1a144e1aab8e25fbed608451
+          sortingKey: "000000"
+          contentHash: 9dfac413
+          type: code
+          content: print('hello world')
+          metadata:
+            execution_context_id: 74cb70fc-0922-49b1-90ed-639872bbe629
+      executionMode: block
+      id: 5572b2bb2cc94d1da04068a2a7ab07cb
+      isModule: false
+      name: Notebook 1
+version: 1.0.0
