@@ -1,0 +1,20 @@
+environment: {}
+execution: {}
+metadata:
+  createdAt: 2026-06-03T13:28:41.371Z
+  modifiedAt: 2026-06-04T13:07:06.770Z
+project:
+  id: 23b3b590-fe38-4392-ad07-b00fb5efc76d
+  integrations:
+    - id: 08ab5e60-059b-477e-a42f-b02aebf67917
+      name: github_repo
+      type: github_package
+  name: Git test
+  notebooks:
+    - blocks: []
+      executionMode: block
+      id: 4dd5c1984f854f7384d77a238eba8b8a
+      isModule: false
+      name: Even more nested notebook
+      workingDirectory: /github_repo
+version: 1.0.0
