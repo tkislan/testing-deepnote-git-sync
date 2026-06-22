@@ -1,0 +1,297 @@
+environment: {}
+execution: {}
+metadata:
+  createdAt: 2025-10-03T09:46:24.570Z
+  modifiedAt: 2026-06-22T14:45:23.948Z
+project:
+  id: 6624b185-4111-43dc-8bb2-b618bc122063
+  integrations:
+    - id: 2fa61b86-663b-4093-918b-d2f2e155b075
+      name: BigQuery Staging and OAuth
+      type: big-query
+    - id: c965a743-58bd-47ad-b24f-d8327932f9ef
+      name: Deepnote BigQuery - production
+      type: big-query
+    - id: e823e985-3f95-4a0b-8487-1b39480eb235
+      name: Deepnote Testing
+      type: big-query
+    - id: 88f5e099-7229-4bd4-84dc-b28e96a29816
+      name: rnacentral
+      type: pgsql
+    - id: cd9f2db4-230b-49d5-b567-a70aaf3e6ff2
+      name: Staging Big Query Assessment
+      type: big-query
+    - id: a2d95f48-81e5-46fc-bcb0-29779c06b3cd
+      name: testing_deepnote_git_sync
+      type: github_package
+  name: Git Integration
+  notebooks:
+    - blocks:
+        - id: 0de0b92b3f984eacb8017c3f57d435fe
+          blockGroup: 4b847a70900e48daae65b504ea269a10
+          sortingKey: "000000"
+          contentHash: f678b0fb
+          type: sql
+          content: >-
+            -- Average number of notebooks per project by plan
+
+            with t as (select count(*) as cnt, n.project_id, ap.plan_name
+
+            from deepnote_production_view.notebooks n
+
+            left join deepnote_production_view.projects p on n.project_id = p.id
+
+            left join deepnote_production_view.teams t on p.team_id = t.id
+
+            left join deepnote_production_view.active_plans ap on ap.team_id = t.id
+
+            group by n.project_id, ap.plan_name)
+
+            select avg(cnt), plan_name from t
+
+            group by plan_name
+
+            ;
+          metadata:
+            execution_context_id: 0a39fe72-a72c-450b-b3a6-e992b4b08194
+            deepnote_table_state:
+              sortBy: []
+              filters: []
+              pageSize: 25
+              pageIndex: 0
+              columnOrder:
+                - f0_
+                - plan_name
+              hiddenColumnIds: []
+              columnDisplayNames: []
+              conditionalFilters: []
+              cellFormattingRules: []
+              wrappedTextColumnIds: []
+            deepnote_variable_name: df_1
+            deepnote_return_variable_type: dataframe
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+            deepnote_table_loading: false
+        - id: 2fa82ca5834c45779b7030d077e2a936
+          blockGroup: 61c7f70c30a4480d9fcd2f11e0b34be7
+          sortingKey: "000001"
+          contentHash: 2e108fa0
+          type: code
+          content: >-
+            # Get first row from df_1
+
+            first_row = df_1.iloc[0]
+
+            first_row
+          metadata:
+            execution_context_id: 0a39fe72-a72c-450b-b3a6-e992b4b08194
+        - id: 623ad334e01049d6ab100fb65df290ef
+          blockGroup: 85287841751140d2b7d8040d8c151e40
+          sortingKey: "000002"
+          contentHash: 8e116b85
+          type: sql
+          content: >-
+            select * from frontend_tracking.ai_feedback_submitted
+
+            where anonymous_id = '50'
+          metadata:
+            execution_context_id: 193ca313-60d8-4ff0-a181-16a21b510540
+            deepnote_variable_name: df_6
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+        - id: 62e4b9a0f7ea44d98891f26e42d8bef2
+          blockGroup: ec87a5d9fdde4cb0959fe952d6075df3
+          sortingKey: "000003"
+          type: sql
+          content: SELECT * FROM `deepnote-testing`.tomas_test.mytable_ LIMIT 100
+          metadata:
+            deepnote_variable_name: df_7
+            sql_integration_id: 2fa61b86-663b-4093-918b-d2f2e155b075
+        - id: 09f48fe4cb474f4994113b2926e2e3ea
+          blockGroup: e55c670a52194ad89c75a8629b8289a3
+          sortingKey: "000004"
+          contentHash: fce8c699
+          type: sql
+          content: SELECT * FROM `deepnote-testing.tomas_test.mytable_*` LIMIT 100
+          metadata:
+            execution_context_id: 5ee76857-8581-4214-8690-d045c6c26bc3
+            deepnote_variable_name: df_8
+            sql_integration_id: 2fa61b86-663b-4093-918b-d2f2e155b075
+        - id: d4e87c2ee1384a2098fcf6c9570d12fd
+          blockGroup: d5a01db7177542bdb6a0bcacb3eb6aea
+          sortingKey: "000005"
+          contentHash: 80fd510
+          type: sql
+          content: SELECT * FROM ``deepnote-testing`.tomas_test.mytable_*` LIMIT 100
+          metadata:
+            execution_context_id: 5ee76857-8581-4214-8690-d045c6c26bc3
+            deepnote_variable_name: df_9
+            sql_integration_id: 2fa61b86-663b-4093-918b-d2f2e155b075
+        - id: 42b7498e0e724a539809ed5572fd6445
+          blockGroup: 0dccc1850d1a455599b2819bb574ee11
+          sortingKey: "000006"
+          contentHash: 752cb926
+          type: sql
+          content: >-
+            select * from deepnote_production_view.active_plans
+
+            limit 100;
+          metadata:
+            execution_context_id: a700e648-4d0d-4a0b-b238-7fb6f491a0ba
+            deepnote_variable_name: query_2
+            deepnote_return_variable_type: query_preview
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+        - id: a3facf39721741e08d523e0de8e67079
+          blockGroup: 6bd7d9c6883043febfb49201189128a9
+          sortingKey: "000007"
+          contentHash: 3b029733
+          type: sql
+          content: >-
+            -- Number of users per team per role in DAZN workspaces
+
+            select t.name, t.slug, tm.user_role, count(*) as cnt from deepnote_production_view.teams t
+
+            left join deepnote_production_view.team_members tm on t.id = tm.team_id
+
+            left join deepnote_production_view.users u on tm.user_id = u.id
+
+            where lower(t.name) like '%dazn%'
+
+            group by t.id, t.name, t.slug, tm.user_role
+
+            having cnt >= 5
+
+            order by t.slug, tm.user_role
+          metadata:
+            execution_context_id: a700e648-4d0d-4a0b-b238-7fb6f491a0ba
+            deepnote_table_state:
+              sortBy: []
+              filters: []
+              pageSize: 50
+              pageIndex: 0
+              columnOrder:
+                - id
+                - owner_id
+                - name
+                - slug
+                - description
+                - link
+                - avatar
+                - created_at
+                - updated_at
+                - deleted_at
+                - custom_env_enabled
+                - stripe_customer_id
+                - is_active
+                - deepnote_cell_enabled
+                - is_under_review
+                - is_starter_team
+                - public_projects_allowed
+                - public_apps_allowed
+                - review_status
+                - github_url
+                - twitter_handle
+                - location
+                - _synced_at
+              hiddenColumnIds: []
+              columnDisplayNames: []
+              conditionalFilters: []
+              cellFormattingRules: []
+              wrappedTextColumnIds: []
+            deepnote_variable_name: query_3
+            deepnote_return_variable_type: query_preview
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+            deepnote_table_loading: false
+        - id: 5e91e2bf83a8451ba17ac7a78efb34cf
+          blockGroup: 9810a727591f42d6bcb3469129a938f3
+          sortingKey: "000008"
+          contentHash: 79f544d3
+          type: sql
+          content: >-
+            -- Number of projects with activity in the last 90 days
+
+            with t as (SELECT max(b.updated_at) as max_udpated_at, project_id 
+
+            FROM `deepnote_production_view.blocks` b
+
+            left join deepnote_production_view.notebooks n on b.notebook_id = n.id
+
+            GROUP BY project_id
+
+            HAVING max_udpated_at > TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 90 DAY)
+
+            )
+
+            select count(*) from t
+          metadata:
+            execution_context_id: a700e648-4d0d-4a0b-b238-7fb6f491a0ba
+            deepnote_variable_name: query_4
+            deepnote_return_variable_type: query_preview
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+        - id: 1f3eef4cd08345fb847d5b78717e4100
+          blockGroup: 4d21039824544bfa8ea546732dba57bf
+          sortingKey: "000009"
+          contentHash: fe90607c
+          type: sql
+          content: >-
+            select * from deepnote_production_view.blocks
+
+            where block_type = 'big-number'
+
+            limit 100;
+          metadata:
+            execution_context_id: a700e648-4d0d-4a0b-b238-7fb6f491a0ba
+            deepnote_variable_name: query_5
+            deepnote_return_variable_type: query_preview
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+        - id: dc7134a12ac448f8b89eacb360e0ad51
+          blockGroup: d4648a852dc54945b37079ed38c3ff93
+          sortingKey: "000010"
+          type: text-cell-callout
+          content: Callout
+          metadata:
+            formattedRanges: []
+        - id: 551f28cee6e94c579376e18f287a7116
+          blockGroup: 9926c744a840457489c0f905a72dcb61
+          sortingKey: "000011"
+          type: markdown
+          content: ""
+          metadata: {}
+        - id: 1a7efce250044cf59d27ef3a6e9fb6ef
+          blockGroup: a5d5fa99b84c45c0bcaec0c5a7849983
+          sortingKey: "000012"
+          type: text-cell-todo
+          content: ""
+          metadata:
+            formattedRanges: []
+            checked: false
+        - id: bdca25bccc7547f7af0770caa5170a69
+          blockGroup: 8c67dacf1f33421db5530cb2af486d9e
+          sortingKey: "000013"
+          type: text-cell-p
+          content: Some paragraph
+          metadata:
+            formattedRanges: []
+        - id: 3a3d0e1f03074f2890e54a20f165993b
+          blockGroup: 0159917315704a8a8e71ea049c3a1ed3
+          sortingKey: "000014"
+          type: text-cell-h1
+          content: Some header
+          metadata:
+            formattedRanges: []
+        - id: b5f38eff28fa4b138923b872e8bfe6f9
+          blockGroup: 91c5a8a3a55c46b58b161a9dec4e7ecb
+          sortingKey: "000015"
+          contentHash: b4408b03
+          type: sql
+          content: >-
+            select * from deepnote_production_view.users
+
+            where lower(email) like '%wezeo%'
+          metadata:
+            execution_context_id: f8feb9c4-6e32-4228-96b4-acd89ddb9a98
+            deepnote_variable_name: df_10
+            sql_integration_id: c965a743-58bd-47ad-b24f-d8327932f9ef
+      executionMode: block
+      id: b902307641724b4b82d1e26e78d102f1
+      isModule: false
+      name: Notebook 2
+version: 1.0.0

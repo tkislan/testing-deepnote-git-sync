@@ -1,0 +1,66 @@
+environment: {}
+execution: {}
+metadata:
+  createdAt: 2025-10-03T09:46:24.570Z
+  modifiedAt: 2026-06-22T14:45:23.938Z
+project:
+  id: 6624b185-4111-43dc-8bb2-b618bc122063
+  integrations:
+    - id: 2fa61b86-663b-4093-918b-d2f2e155b075
+      name: BigQuery Staging and OAuth
+      type: big-query
+    - id: c965a743-58bd-47ad-b24f-d8327932f9ef
+      name: Deepnote BigQuery - production
+      type: big-query
+    - id: e823e985-3f95-4a0b-8487-1b39480eb235
+      name: Deepnote Testing
+      type: big-query
+    - id: 88f5e099-7229-4bd4-84dc-b28e96a29816
+      name: rnacentral
+      type: pgsql
+    - id: cd9f2db4-230b-49d5-b567-a70aaf3e6ff2
+      name: Staging Big Query Assessment
+      type: big-query
+    - id: a2d95f48-81e5-46fc-bcb0-29779c06b3cd
+      name: testing_deepnote_git_sync
+      type: github_package
+  name: Git Integration
+  notebooks:
+    - blocks:
+        - id: 5dd32acc851443fbbffb860c2263ea82
+          blockGroup: 34db431986dd48c9bfa339d3ec8ca7ad
+          sortingKey: "000000"
+          type: code
+          content: ""
+          metadata: {}
+        - id: 621249394ea248108c2b5d769e201229
+          blockGroup: 2dc0e1ddec8f45599e27026658125b1a
+          sortingKey: "000001"
+          contentHash: aa22d572
+          type: sql
+          content: >2-
+                  WITH
+                    T AS (
+                      SELECT
+                        TABLES.table_schema AS table_schema,
+                        TABLES.table_name AS table_name,
+                        regexp_extract(TABLES.table_name, '^(.*)\\d{8}$') AS shard_prefix
+                      FROM INFORMATION_SCHEMA.TABLES AS TABLES
+                      WHERE TABLES.table_type IN ('BASE TABLE', 'VIEW', 'MATERIALIZED VIEW')
+                    )
+                  SELECT
+                    table_schema,
+                    COALESCE(shard_prefix, table_name) AS table_name,
+                    ARRAY_AGG(CASE WHEN shard_prefix IS NOT NULL THEN table_name END IGNORE NULLS)
+                      AS shard_table_names
+                  FROM T
+                  GROUP BY table_schema, table_name;
+          metadata:
+            execution_context_id: d9fbf24e-3069-4165-b71e-ec63f933b1be
+            deepnote_variable_name: df_1
+            sql_integration_id: e823e985-3f95-4a0b-8487-1b39480eb235
+      executionMode: block
+      id: a20da6f5a6d94407899bb241b6d9e253
+      isModule: false
+      name: Notebook 4
+version: 1.0.0

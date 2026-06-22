@@ -1,0 +1,59 @@
+environment: {}
+execution: {}
+metadata:
+  createdAt: 2025-10-03T09:46:24.570Z
+  modifiedAt: 2026-06-22T14:45:23.957Z
+project:
+  id: 6624b185-4111-43dc-8bb2-b618bc122063
+  integrations:
+    - id: 2fa61b86-663b-4093-918b-d2f2e155b075
+      name: BigQuery Staging and OAuth
+      type: big-query
+    - id: c965a743-58bd-47ad-b24f-d8327932f9ef
+      name: Deepnote BigQuery - production
+      type: big-query
+    - id: e823e985-3f95-4a0b-8487-1b39480eb235
+      name: Deepnote Testing
+      type: big-query
+    - id: 88f5e099-7229-4bd4-84dc-b28e96a29816
+      name: rnacentral
+      type: pgsql
+    - id: cd9f2db4-230b-49d5-b567-a70aaf3e6ff2
+      name: Staging Big Query Assessment
+      type: big-query
+    - id: a2d95f48-81e5-46fc-bcb0-29779c06b3cd
+      name: testing_deepnote_git_sync
+      type: github_package
+  name: Git Integration
+  notebooks:
+    - blocks:
+        - id: 17184e4c3adf4e119e80c557ce91d00c
+          blockGroup: f1e2d3c4b5a6978801234567abcdef90
+          sortingKey: "000000"
+          contentHash: sha256:c68ad549b48efc4220ae5b755965b3865981e3b0cbb80613c3a41233584e543d
+          type: code
+          content: >
+            import pandas as pd
+
+
+            df = pd.DataFrame({
+                "name": ["Alice", "Bob", "Charlie", "Diana"],
+                "age": [28, 34, 45, 23],
+                "score": [88.5, 92.3, 76.1, 50],
+            })
+
+            df
+          metadata: {}
+        - id: 67ba7cf03708457b8bd58e02e056e48d
+          blockGroup: 12345678abcdef90a1b2c3d4e5f60718
+          sortingKey: "000001"
+          contentHash: sha256:06b7079ba67eb32e9ae5ce881a76cedc9de28a992b7f788f35a224293ac00c88
+          type: code
+          content: >
+            df["name"]
+          metadata: {}
+      executionMode: block
+      id: 6bfd4febc3a5402d99528367fac8b961
+      isModule: false
+      name: Postgres
+version: 1.0.0

@@ -1,0 +1,88 @@
+environment: {}
+execution: {}
+metadata:
+  createdAt: 2025-10-03T09:46:24.570Z
+  modifiedAt: 2026-06-22T14:45:23.957Z
+project:
+  id: 6624b185-4111-43dc-8bb2-b618bc122063
+  integrations:
+    - id: 2fa61b86-663b-4093-918b-d2f2e155b075
+      name: BigQuery Staging and OAuth
+      type: big-query
+    - id: c965a743-58bd-47ad-b24f-d8327932f9ef
+      name: Deepnote BigQuery - production
+      type: big-query
+    - id: e823e985-3f95-4a0b-8487-1b39480eb235
+      name: Deepnote Testing
+      type: big-query
+    - id: 88f5e099-7229-4bd4-84dc-b28e96a29816
+      name: rnacentral
+      type: pgsql
+    - id: cd9f2db4-230b-49d5-b567-a70aaf3e6ff2
+      name: Staging Big Query Assessment
+      type: big-query
+    - id: a2d95f48-81e5-46fc-bcb0-29779c06b3cd
+      name: testing_deepnote_git_sync
+      type: github_package
+  name: Git Integration
+  notebooks:
+    - blocks:
+        - id: 9506d1eee2e943948c50ea742d208ab2
+          blockGroup: f1e2d3c4b5a6978801234567abcdef90
+          sortingKey: "000000"
+          contentHash: 4e80142d
+          type: code
+          content: >
+            import pandas as pd
+
+
+            df = pd.DataFrame({
+                "name": ["Thomas", "Peter", "Charlie", "Diana"],
+                "age": [28, 34, 45, 23],
+                "score": [88.5, 92.3, 76.1, 50],
+            })
+
+            df
+          metadata:
+            execution_context_id: c2a400d6-4db1-456e-b25e-087cd9187dab
+        - id: e51c2406bbaa4353b08172447e89ca62
+          blockGroup: 12345678abcdef90a1b2c3d4e5f60718
+          sortingKey: "000001"
+          contentHash: 8dffaf44
+          type: code
+          content: >
+            df["name"]
+          metadata:
+            execution_context_id: c2a400d6-4db1-456e-b25e-087cd9187dab
+        - id: 4a3a596829b84b809b7acf47d21e3f5a
+          blockGroup: 086ca868d36141b1a1d5669a2354f1ca
+          sortingKey: "000002"
+          contentHash: 57eff826
+          type: code
+          content: print(df)
+          metadata:
+            execution_context_id: c2a400d6-4db1-456e-b25e-087cd9187dab
+        - id: b8764f8e05284678878441d21683f446
+          blockGroup: 08004ed77d0743259dbef7780e77796b
+          sortingKey: "000003"
+          contentHash: 1806a127
+          type: code
+          content: _dntk
+          metadata:
+            execution_context_id: c2a400d6-4db1-456e-b25e-087cd9187dab
+        - id: 762be51ce10146c3afb1c3a111a778f1
+          blockGroup: 9cebb3d7848148888a39a1a3baf34855
+          sortingKey: "000004"
+          contentHash: 4c486f4e
+          type: code
+          content: >-
+            import sys
+
+            sys.version
+          metadata:
+            execution_context_id: c2a400d6-4db1-456e-b25e-087cd9187dab
+      executionMode: block
+      id: 239b4e7ef4b64842ab836de89910f2f1
+      isModule: false
+      name: Dummy
+version: 1.0.0
