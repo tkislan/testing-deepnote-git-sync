@@ -2,7 +2,7 @@ environment: {}
 execution: {}
 metadata:
   createdAt: 2025-10-03T09:46:24.570Z
-  modifiedAt: 2026-06-19T06:33:53.888Z
+  modifiedAt: 2026-06-22T09:13:22.708Z
 project:
   id: e20bfc2e369c44c78745c2a0a50d46d3
   integrations:
@@ -24,7 +24,7 @@ project:
     - id: a2d95f48-81e5-46fc-bcb0-29779c06b3cd
       name: testing_deepnote_git_sync
       type: github_package
-  name: Tomas Kislan
+  name: Git Integration
   notebooks:
     - blocks:
         - id: a3b7c9d1e5f2481090ab3c6d8e7f1a24
@@ -44,7 +44,7 @@ project:
 
             df
           metadata:
-            execution_context_id: 81f9cf29-b3fe-4293-bff5-692ee6bb52ea
+            execution_context_id: 9757900e-e74a-4a26-bc48-4206cd8bef90
         - id: c4d5e6f7a8b9012345678901abcdef12
           blockGroup: 12345678abcdef90a1b2c3d4e5f60718
           sortingKey: "000001"
@@ -53,7 +53,7 @@ project:
           content: >
             df["name"]
           metadata:
-            execution_context_id: 81f9cf29-b3fe-4293-bff5-692ee6bb52ea
+            execution_context_id: 9757900e-e74a-4a26-bc48-4206cd8bef90
         - id: 46d0b8d87932495f8eb5f5eac806a62f
           blockGroup: 086ca868d36141b1a1d5669a2354f1ca
           sortingKey: "000002"
@@ -61,7 +61,7 @@ project:
           type: code
           content: print(df)
           metadata:
-            execution_context_id: 81f9cf29-b3fe-4293-bff5-692ee6bb52ea
+            execution_context_id: 9757900e-e74a-4a26-bc48-4206cd8bef90
         - id: 729bfc5192714222a20c57cab0c65798
           blockGroup: 08004ed77d0743259dbef7780e77796b
           sortingKey: "000003"
@@ -69,7 +69,7 @@ project:
           type: code
           content: _dntk
           metadata:
-            execution_context_id: 81f9cf29-b3fe-4293-bff5-692ee6bb52ea
+            execution_context_id: 9757900e-e74a-4a26-bc48-4206cd8bef90
         - id: 56610f6f1abb49338be219eadb21ad6c
           blockGroup: 9cebb3d7848148888a39a1a3baf34855
           sortingKey: "000004"
@@ -80,7 +80,7 @@ project:
 
             sys.version
           metadata:
-            execution_context_id: 81f9cf29-b3fe-4293-bff5-692ee6bb52ea
+            execution_context_id: 9757900e-e74a-4a26-bc48-4206cd8bef90
       executionMode: block
       id: 7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d
       isModule: false
