@@ -2,7 +2,7 @@ environment: {}
 execution: {}
 metadata:
   createdAt: 2025-10-03T09:46:24.570Z
-  modifiedAt: 2026-06-22T14:45:23.948Z
+  modifiedAt: 2026-06-22T14:46:24.151Z
 project:
   id: 6624b185-4111-43dc-8bb2-b618bc122063
   integrations:
@@ -92,7 +92,7 @@ project:
           content: >-
             select * from frontend_tracking.ai_feedback_submitted
 
-            where anonymous_id = '50'
+            where anonymous_id = '100'
           metadata:
             execution_context_id: 193ca313-60d8-4ff0-a181-16a21b510540
             deepnote_variable_name: df_6
